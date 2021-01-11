@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+
+		<h2>Product Review Sentiment Analysis</h2>
+
+	</div>
+	</header>
+
+   <div class="results">
+		<p><b>Summary of all reviews</b></p>
+	   <p>Total number of reviews: {{reviewSummary[0]}} </p>
+	   <p>Good ratings : {{reviewSummary[1]}} reviews for products</p>
+    <p>Neutral ratings : {{reviewSummary[2]}} reviews for products</p>
+    <p>Bad ratings : {{reviewSummary[3]}} reviews for products</p>
+
+	</div>
+
+</body>
+</html>

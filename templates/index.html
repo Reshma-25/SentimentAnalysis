@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+</head>
+<body>
+
+<div class="topnav">
+ <h2> Product Review Sentiment Analysis </h2>
+
+</div>
+  <div class="ml-container ">
+		<form action="{{ url_for('predict')}}" method="POST">
+			<br/>
+
+			<br/>
+			<div class="search-container">
+
+				<p><b>Enter your text to predict sentiment</b></p>
+			    <input type="text" placeholder="Enter your text to predict sentiment" name="reviewText">
+                <button type="submit" value="predict">Predict</button>
+
+			</div>
+
+
+	</form>
+
+	  <form action="{{ url_for('summaryreview')}}" method="POST">
+		  <div class="summaryReview">
+				<button type="submit" value="summaryreview">Get a summary of all the reviews </button>
+			</div>
+
+
+	  </form>
+
+
+	   <form action="{{ url_for('features')}}" method="POST">
+		  <div class="summaryReview">
+				<button type="submit" value="features">Features and their Importance </button>
+			</div>
+	  </form>
+
+	  <div class="recommendProduct">Recommending a Product</div>
+
+	</div>
+
+
+
+</body>
+</html>
+
+

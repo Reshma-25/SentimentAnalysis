@@ -1,0 +1,162 @@
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color:#f4f3f3;
+}
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  padding-left:125px;
+}
+.ml-container{
+   padding-left:125px;
+}
+.search-container input{
+   width:250px;
+   height:35px;
+}
+.search-container button{
+  width:75px;
+  height:35px;
+  background-color:#add8e6;
+  border:#CDCDCD;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right ;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 700px;
+}
+
+.topnav .search-container button{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+  margin-left:45px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    padding-left:45px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+.container{
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header{
+	background:#03A9F4;#35434a;
+	border-bottom:#448AFF 3px solid;
+	height:120px;
+	width:100%;
+	padding-top:30px;
+
+}
+
+.main-header{
+			text-align:center;
+			background-color: blue;
+			height:100px;
+			width:100%;
+			margin:0px;
+		}
+
+
+header h2{
+	text-align:center;
+	color:#fff;
+
+}
+
+
+
+.btn-info {background-color: #2196F3;
+	height:40px;
+	width:100px;} /* Blue */
+.btn-info:hover {background: #0b7dda;}
+
+
+.results{
+	border-radius: 15px 50px;
+    /*background: #345fe4;*/
+    background: #CDCDCD;
+    padding: 20px;
+    min-width: 250px;
+    min-height: 200px;
+    margin:0px 45px;
+}
+div.summaryReview,div.recommendProduct{
+margin-top:45px;
+}
+
+.summaryReview button, .recommendProduct{
+  background: #add8e6;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width:25%;
+}
+.recommendProduct{
+  padding-left:25px;
+}
+
+
