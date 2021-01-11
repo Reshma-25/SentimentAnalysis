@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
@@ -20,6 +20,9 @@
 	   <p>Good ratings : {{reviewSummary[1]}} reviews for products</p>
     <p>Neutral ratings : {{reviewSummary[2]}} reviews for products</p>
     <p>Bad ratings : {{reviewSummary[3]}} reviews for products</p>
+
+		<br/>
+     <div><a href="javascript:window.history.back();"> Go Back </a></div>
 
 	</div>
 

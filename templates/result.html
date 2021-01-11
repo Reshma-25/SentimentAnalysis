@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
@@ -22,6 +22,9 @@
 		{% elif prediction == 'Positive' %}
 		<h2 style="color:green;">Positive</h2>
 		{% endif %}
+
+		<br/>
+		<div><a href="javascript:window.history.back();"> Go Back </a></div>
 	</div>
 
 
