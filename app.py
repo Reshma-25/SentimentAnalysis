@@ -20,7 +20,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    recommend_final = recommend()
+    return render_template('index.html', recommend_final = [recommend_final.to_html()],titles = ['Product', 'Recommended Products'] )
 
 @app.route('/predict', methods=['POST'])
 
@@ -81,6 +82,14 @@ def top_feats_in_doc(vectors, features, row_id, top_n=25):
     return top_tfidf_feats(row, features, top_n)
 
 
+def recommend():
+    recomm_df = data[['product', 'reviews.rating']]
+    # Getting the average rating product
+    avg_rating_prod = recomm_df.groupby('product').sum() / recomm_df.groupby('product').count()
+    avg_rating_prod = avg_rating_prod.reset_index()
+
+    # Top 10 Highly rated products(Popularity based)
+    return avg_rating_prod.nlargest(10, 'reviews.rating')
 
 if __name__ == '__main__':
 	app.run(debug=True)
